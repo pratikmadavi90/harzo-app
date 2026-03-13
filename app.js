@@ -1,23 +1,17 @@
-const ctx = document.getElementById('salesChart');
+const express = require("express");
+const cors = require("cors");
 
-new Chart(ctx, {
+const app = express();
 
-type: 'bar',
+app.use(cors());
+app.use(express.json());
 
-data: {
+app.get("/", (req, res) => {
+  res.send("Harzo backend running 🚀");
+});
 
-labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+const PORT = process.env.PORT || 5000;
 
-datasets: [{
-
-label: 'Sales',
-
-data: [12000,19000,15000,22000,30000,27000],
-
-backgroundColor: 'green'
-
-}]
-
-}
-
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
