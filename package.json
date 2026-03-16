@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "harzo-backend",
   "version": "1.0.0",
@@ -13,3 +14,26 @@
     "nodemon": "^3.1.14"
   }
 }
+=======
+
+{
+  "name": "harzo-backend",
+  "version": "1.0.0",
+  "description": "Harzo Backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Pratik",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.4",
+    "multer": "^2.1.1"
+  }
+}
+>>>>>>> 948e3b78af5ade03742a452e2fc92a8ee2a69815
