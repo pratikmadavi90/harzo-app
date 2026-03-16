@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Offers & Coupons</title>
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<h1>Offers / Coupons Management</h1>
+
+<button onclick="showOfferForm()">Create Discount</button>
+
+<br><br>
+
+<table id="offerTable">
+
+<tr>
+<th>Coupon Code</th>
+<th>Type</th>
+<th>Value</th>
+<th>Usage</th>
+<th>Action</th>
+</tr>
+
+</table>
+
+<br>
+
+<div id="offerForm" style="display:none">
+
+<h2>Create Offer</h2>
+
+<input type="text" id="couponCode" placeholder="Coupon Code">
+
+<br><br>
+
+<select id="discountType">
+
+<option value="percentage">Percentage</option>
+<option value="flat">Flat</option>
+<option value="bogo">Buy1Get1</option>
+
+</select>
+
+<br><br>
+
+<input type="number" id="discountValue" placeholder="Discount Value">
+
+<br><br>
+
+<button onclick="addOffer()">Save Offer</button>
+
+</div>
+
+<h2>Deal Analytics</h2>
+
+<p>Total Coupons: <span id="totalCoupons">0</span></p>
+<p>Total Usage: <span id="totalUsage">0</span></p>
+
+<script src="../js/offers.js"></script>
+
+</body>
+</html>

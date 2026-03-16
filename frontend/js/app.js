@@ -1,0 +1,35 @@
+const ctx = document.getElementById('salesChart');
+
+new Chart(ctx, {
+
+type: 'bar',
+
+data: {
+
+labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+
+datasets: [{
+
+label: 'Sales',
+
+data: [12000,19000,15000,22000,30000,27000],
+
+backgroundColor: 'green'
+
+}]
+
+}
+
+});
+
+function toggleSidebar(){
+
+let sidebar = document.querySelector(".sidebar")
+let main = document.querySelector(".main")
+
+if(sidebar && main){
+sidebar.classList.toggle("collapsed")
+main.classList.toggle("collapsed")
+}
+
+}

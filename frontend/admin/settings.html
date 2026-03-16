@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Settings</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="main">
+
+<h1>Store Settings</h1>
+
+<h2>Store Name</h2>
+
+<input id="storeName" placeholder="Enter Store Name">
+
+<button onclick="saveStore()">Save</button>
+
+<p id="storeDisplay"></p>
+
+<br>
+
+<h2>Store Logo</h2>
+
+<input type="file" id="logoUpload">
+
+<button onclick="uploadLogo()">Upload</button>
+
+<br><br>
+
+<img id="logoPreview" width="120">
+
+<br><br>
+
+<h2>Contact Details</h2>
+
+<input id="phone" placeholder="Phone Number">
+
+<input id="email" placeholder="Email">
+
+<button onclick="saveContact()">Save</button>
+
+<p id="contactDisplay"></p>
+
+<br>
+
+<h2>Currency</h2>
+
+<select id="currency">
+
+<option value="₹">INR (₹)</option>
+<option value="$">USD ($)</option>
+<option value="€">EUR (€)</option>
+
+</select>
+
+<button onclick="saveCurrency()">Save</button>
+
+<p id="currencyDisplay"></p>
+
+<br>
+
+<h2>Tax Settings (GST)</h2>
+
+<input id="gst" placeholder="GST Percentage">
+
+<button onclick="saveTax()">Save</button>
+
+<p id="taxDisplay"></p>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+</html>

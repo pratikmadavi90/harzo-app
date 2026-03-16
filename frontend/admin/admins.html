@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Management</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="main">
+
+<h1>Admin Management</h1>
+
+<h2>Add Admin</h2>
+
+<input id="adminName" placeholder="Admin Name">
+<input id="adminEmail" placeholder="Admin Email">
+
+<select id="adminRole">
+<option>Super Admin</option>
+<option>Manager</option>
+<option>Support</option>
+</select>
+
+<button onclick="addAdmin()">Add Admin</button>
+
+<br><br>
+
+<table id="adminTable"></table>
+
+<br>
+
+<h2>Admin Activity Logs</h2>
+
+<ul id="activityLogs"></ul>
+
+</div>
+
+<script src="../js/admins.js"></script>
+
+</body>
+</html>

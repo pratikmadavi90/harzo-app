@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Delivery Management</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="main">
+
+<h1>Delivery Management</h1>
+
+<h2>Delivery Zones</h2>
+
+<input id="zoneName" placeholder="Zone name">
+<button onclick="addZone()">Add Zone</button>
+
+<ul id="zoneList"></ul>
+
+<br>
+
+<h2>Assign Delivery Boy</h2>
+
+<input id="orderId" placeholder="Order ID">
+<input id="boyName" placeholder="Delivery Boy Name">
+
+<button onclick="assignBoy()">Assign</button>
+
+<ul id="assignList"></ul>
+
+<br>
+
+<h2>Delivery Charges</h2>
+
+<input id="charge" placeholder="Delivery Charge ₹">
+<button onclick="setCharge()">Save</button>
+
+<p id="chargeDisplay"></p>
+
+<br>
+
+<h2>Free Delivery Limit</h2>
+
+<input id="limit" placeholder="Free Delivery Above ₹">
+<button onclick="setLimit()">Save</button>
+
+<p id="limitDisplay"></p>
+
+<br>
+
+<h2>Settlement & Refunds</h2>
+
+<table id="refundTable"></table>
+
+</div>
+
+<script src="../js/delivery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products Management</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<h1>Products Management</h1>
+
+<input type="text" id="search" placeholder="Search Product..." onkeyup="searchProduct()">
+
+<br><br>
+
+<button onclick="showForm()">Add Product</button>
+
+<input type="file" id="csvUpload">
+
+<5le id="productTable">
+
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Variant</th>
+<th>Price</th>
+<th>Stock</th>
+<th>Actions</th>
+</tr>
+
+</table>
+
+<br>
+
+<div id="productForm" style="display:none">
+
+<h2>Add Product</h2>
+
+<input type="text" id="name" placeholder="Product Name"><br><br>
+
+<select id="variant">
+<option>500g</option>
+<option>1kg</option>
+<option>1.5kg</option>
+<option>2kg</option>
+<option>2.5kg</option>
+<option>3kg</option>
+<option>3.5kg</option>
+<option>4kg</option>
+<option>4.5kg</option>
+<option>5kg</option>
+<option>6kg</option>
+<option>7kg</option>
+<option>8kg</option>
+<option>9kg</option>
+<option>10kg</option>
+
+</select><br><br>
+
+<input type="number" id="price" placeholder="Price"><br><br>
+
+<input type="number" id="stock" placeholder="Stock"><br><br>
+
+<h3>Product Images</h3>
+
+Front <input type="file"><br><br>
+Back <input type="file"><br><br>
+Ingredients <input type="file"><br><br>
+Nutrition <input type="file"><br><br>
+Barcode <input type="file"><br><br>
+
+<button onclick="addProduct()">Save Product</button>
+
+</div>
+
+<script src="../js/products.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HARZO Admin Dashboard</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  
+
+<div class="sidebar">
+
+
+
+<h2>HARZO</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="products.html">Products</a>
+<a href="categories.html">Categories</a>
+<a href="orders.html">Orders</a>
+<a href="users.html">Users</a>
+<a href="reports.html">Reports</a>
+<a href="offers.html">Offers / Coupons</a>
+<a href="inventory.html">Inventory / Warehouse</a>
+<a href="payments.html">Payments</a>
+<a href="delivery.html">Delivery Management</a>
+<a href="banners.html">Banners / Homepage</a>
+<a href="notifications.html">Notifications</a>
+<a href="reviews.html">Reviews / Ratings</a>
+<a href="analytics.html">Analytics / Reports</a>
+<a href="settings.html">Settings</a>
+<a href="admins.html">Admin Management</a>
+
+
+</div>
+
+<div class="main">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Products</h3>
+<p id="totalProducts">120</p>
+</div>
+
+<div class="card">
+<h3>Total Orders</h3>
+<p id="totalOrders">540</p>
+</div>
+
+<div class="card">
+<h3>Total Users</h3>
+<p id="totalUsers">320</p>
+</div>
+
+<div class="card">
+<h3>Total Sales</h3>
+<p id="totalSales">₹1,25,000</p>
+</div>
+
+</div>
+
+<h2>Sales Analytics</h2>
+
+<div style="width:100%; margin-top:30px;">
+<canvas id="salesChart" style="width:100%; height:400px;"></canvas>
+</div>
+
+<h2>Recent Orders</h2>
+
+<table>
+
+<tr>
+<th>Order ID</th>
+<th>User</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>#1001</td>
+<td>Rahul</td>
+<td>₹450</td>
+<td>Delivered</td>
+</tr>
+
+<tr>
+<td>#1002</td>
+<td>Amit</td>
+<td>₹230</td>
+<td>Pending</td>
+</tr>
+
+<tr>
+<td>#1003</td>
+<td>Priya</td>
+<td>₹890</td>
+<td>Shipped</td>
+</tr>
+
+</table>
+
+
+<h2>Low Stock Alerts</h2>
+
+<ul class="lowstock">
+
+<li>Milk - Only 5 left</li>
+<li>Bread - Only 3 left</li>
+<li>Eggs - Only 10 left</li>
+
+</div>
+
+<script>
+
+function toggleSidebar(){
+
+let sidebar=document.querySelector(".sidebar")
+let main=document.querySelector(".main")
+
+sidebar.classList.toggle("collapsed")
+main.classList.toggle("collapsed")
+
+}
+
+</script>
+
+<script src="../js/app.js"></script>
+
+</body>
+</html>

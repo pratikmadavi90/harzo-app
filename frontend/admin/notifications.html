@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Notifications</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="main">
+
+<h1>Notifications</h1>
+
+<h2>Send SMS Notification</h2>
+
+<input id="smsText" placeholder="SMS message">
+<button onclick="sendSMS()">Send SMS</button>
+
+<p id="smsStatus"></p>
+
+<br>
+
+<h2>Send Email Notification</h2>
+
+<input id="emailText" placeholder="Email message">
+<button onclick="sendEmail()">Send Email</button>
+
+<p id="emailStatus"></p>
+
+<br>
+
+<h2>Push Notification</h2>
+
+<input id="pushText" placeholder="Push notification message">
+<button onclick="sendPush()">Send Push</button>
+
+<p id="pushStatus"></p>
+
+<br>
+
+<h2>Order Alerts</h2>
+
+<ul id="orderAlerts"></ul>
+
+<br>
+
+<h2>Offer Alerts</h2>
+
+<ul id="offerAlerts"></ul>
+
+</div>
+
+<script src="../js/notifications.js"></script>
+
+</body>
+
+</html>

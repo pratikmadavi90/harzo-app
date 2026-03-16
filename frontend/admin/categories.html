@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Categories Management</title>
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<h1>Categories Management</h1>
+
+<button onclick="showCategoryForm()">Add Category</button>
+
+<br><br>
+
+<table id="categoryTable">
+
+<thead>
+<tr>
+<th>Category Name</th>
+<th>Subcategory</th>
+<th>Image</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="categoryBody">
+
+</tbody>
+
+</table>
+
+<br>
+
+<div id="categoryForm" style="display:none">
+
+<h2>Add Category</h2>
+
+<select id="categoryName">
+<option value="">Select Category</option>
+<option value="Fruits">Fruits</option>
+<option value="Vegetables">Vegetables</option>
+<option value="Snacks">Snacks</option>
+<option value="Beverages">Beverages</option>
+<option value="Dairy">Dairy</option>
+</select>
+
+<br><br>
+
+<input type="text" id="subcategoryName" placeholder="Subcategory">
+
+<br><br>
+
+<input type="file" id="categoryImage">
+
+<br><br>
+
+<button type="button" onclick="addCategory()">Save Category</button>
+
+</div>
+
+<script src="../js/categories.js"></script>
+
+</body>
+</html>
