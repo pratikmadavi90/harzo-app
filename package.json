@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
   "name": "harzo-backend",
   "version": "1.0.0",
@@ -14,7 +14,7 @@
     "nodemon": "^3.1.14"
   }
 }
-=======
+
 
 {
   "name": "harzo-backend",
@@ -36,4 +36,4 @@
     "multer": "^2.1.1"
   }
 }
->>>>>>> 948e3b78af5ade03742a452e2fc92a8ee2a69815
+
