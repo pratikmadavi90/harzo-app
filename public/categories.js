@@ -11,7 +11,7 @@ async function addCategory(){
 let name = document.getElementById("categoryName").value
 let sub = document.getElementById("subcategoryName").value
 
-const response = await fetch("http://localhost:5000/api/categories/add",{
+const response = await fetch("https://harzo-app.onrender.com/api/categories/add", {
  method:"POST",
  headers:{
   "Content-Type":"application/json"
@@ -98,7 +98,7 @@ document.getElementById("subcategoryName").value=c.sub
 
 async function loadCategories(){
 
-const response = await fetch("http://localhost:5000/api/categories")
+const response = await fetch("https://harzo-app.onrender.com/api/categories")
 
 const data = await response.json()
 

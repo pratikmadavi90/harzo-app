@@ -1,6 +1,6 @@
 // API connection functions
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://harzo-app.onrender.com/api";
 
 // example function
 async function getProducts(){

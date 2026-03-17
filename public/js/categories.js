@@ -13,7 +13,7 @@ let sub = document.getElementById("subcategoryName").value
 
 console.log("Button clicked")
 
-const response = await fetch("http://localhost:5000/api/categories/add",{
+const response = await fetch("https://harzo-app.onrender.com/api/categories/add",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -96,7 +96,7 @@ document.getElementById("subcategoryName").value=c.sub
 
 async function loadCategories(){
 
-const response = await fetch("http://localhost:5000/api/categories")
+const response = await fetch("https://harzo-app.onrender.com/api/categories")
 
 const data = await response.json()
 

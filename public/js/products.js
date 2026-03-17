@@ -3,7 +3,7 @@ let products = []
 // LOAD PRODUCTS
 function loadProducts(){
 
-fetch("http://localhost:5000/api/products")
+fetch("https://harzo-app.onrender.com/api/products")
 
 .then(res => res.json())
 
@@ -85,7 +85,7 @@ let category = document.getElementById("category").value
 let price = document.getElementById("price").value
 let stock = document.getElementById("stock").value
 
-fetch("http://localhost:5000/api/products",{
+fetch("https://harzo-app.onrender.com/api/products", {
 
 method:"POST",
 
@@ -125,7 +125,7 @@ loadProducts()
 // DELETE PRODUCT
 function deleteProduct(id){
 
-fetch("http://localhost:5000/api/products/"+id,{
+fetch("https://harzo-app.onrender.com/api/products/"+id,{
 
 method:"DELETE"
 

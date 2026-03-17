@@ -1,7 +1,7 @@
 let products = []
 function loadProducts(){
 
-fetch("http://localhost:5000/api/products")
+fetch("https://harzo-app.onrender.com/api/products")
 
 .then(res => res.json())
 
@@ -36,7 +36,7 @@ stock
 
 products.push(product)
 
-fetch("http://localhost:5000/api/products/add", {
+fetch("https://harzo-app.onrender.com/api/products/add", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -80,7 +80,7 @@ table.innerHTML += `
 <tr>
 
 <td>
-<img src="http://localhost:5000/uploads/productimages/${p.frontImage}" width="40">
+<img src="https://harzo-app.onrender.com/uploads/productimages/${p.frontImage}" width="40">
 </td>
 
 <td>${p.name}</td>
