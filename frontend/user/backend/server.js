@@ -20,9 +20,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/uploads", express.static(__dirname + "/uploads"));
+const path = require("path");
 
-app.use("/admin", express.static(__dirname + "/../../frontend/admin"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/admin", express.static(path.join(__dirname, "../../frontend/admin")));
 
 // Routes API
 app.use("/api/categories", categoryRoutes);
