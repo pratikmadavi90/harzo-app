@@ -23,11 +23,11 @@ app.use(express.json());
 
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "public")));
-
 app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "admin", "dashboard.html"));
 });
+
+app.use(express.static(path.join(__dirname, "public")));
 
 
 app.use("/uploads", express.static(__dirname + "/uploads"));
