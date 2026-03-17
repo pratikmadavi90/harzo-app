@@ -26,8 +26,9 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/admin", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "admin.html"));
+  res.sendFile(path.join(__dirname, "public", "admin", "index.html"));
 });
+
 
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
