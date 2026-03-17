@@ -5,10 +5,10 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/database");
 
 // Routes
-const productRoutes = require("./routes/productroutes");
-const categoryRoutes = require("./routes/categoryroutes");
-const orderRoutes = require("./routes/orderroutes");
-const userRoutes = require("./routes/userroutes");
+const productRoutes = require("../../../routes/productroutes");
+const categoryRoutes = require("../../../routes/categoryroutes");
+const orderRoutes = require("../../../routes/orderroutes");
+const userRoutes = require("../../../routes/userroutes");
 
 dotenv.config();
 
