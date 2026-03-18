@@ -15,12 +15,28 @@ router.get("/", async (req, res) => {
 // ADD product
 router.post("/add", async (req, res) => {
   try {
-    const product = new Product(req.body);
-    await product.save();
-    res.json(product);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+    console.log("BODY:", req.body) // debug
 
-module.exports = router;
+    const { name, variant, price, stock, image } = req.body
+
+    if (!name || !price) {
+      return res.status(400).json({ error: "Name and price required" })
+    }
+
+    const product = new Product({
+      name,
+      variant,
+      price,
+      stock,
+      image
+    })
+
+    await product.save()
+
+    res.json({ message: "Product saved", product })
+
+  } catch (err) {
+    console.log("ERROR:", err) // 🔥 important
+    res.status(500).json({ error: err.message })
+  }
+})

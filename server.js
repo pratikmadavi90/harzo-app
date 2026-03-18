@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const path = require("path");
 
 const connectDB = require("./config/database");
 
@@ -12,7 +13,7 @@ const userRoutes = require("./routes/userroutes");
 
 dotenv.config();
 
-// MongoDB connect
+// DB connect
 connectDB();
 
 const app = express();
@@ -21,27 +22,34 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const path = require("path");
-
+// 🔐 ADMIN LOGIN ROUTE 
 app.get("/admin", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "admin", "dashboard.html"));
+  res.sendFile(path.join(__dirname, "public", "admin", "login.html"));
 });
 
+// 📁 STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));
 
+// 📁 uploads folder
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use("/uploads", express.static(__dirname + "/uploads"));
-
-// Routes API
-app.use("/api/products", productRoutes);
-
-
-// Test route
+// 🔁 ROOT → LOGIN
 app.get("/", (req, res) => {
+  res.redirect("/admin");
+});
+
+// 🧪 TEST ROUTE
+app.get("/test", (req, res) => {
   res.send("Harzo Backend Running 🚀");
 });
 
-// Server port
+// 🔗 API ROUTES
+app.use("/api/products", productRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/users", userRoutes);
+
+// 🚀 PORT
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

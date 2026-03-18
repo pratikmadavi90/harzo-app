@@ -7,6 +7,12 @@
 
 <body>
 
+ <script>
+if (!localStorage.getItem("isAdminLoggedIn")) {
+  window.location.href = "/admin/login.html";
+}
+</script>  
+
 <h1>Products Management</h1>
 
 <div class="container">
@@ -78,6 +84,8 @@ function showForm(){
   form.style.display = "block";
 }
 </script>
+
+<script src="/js/auth.js"></script>
 
 </body>
 </html>
