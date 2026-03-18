@@ -79,45 +79,34 @@ ${p.image ? `<img src="${p.image}" width="40">` : ""}
 // ADD PRODUCT
 function addProduct(){
 
-let name = document.getElementById("name").value
-let variant = document.getElementById("variant").value
-let category = document.getElementById("category").value
-let price = document.getElementById("price").value
-let stock = document.getElementById("stock").value
+  let name = document.getElementById("name").value
+  let variant = document.getElementById("variant").value
+  let price = document.getElementById("price").value
+  let stock = document.getElementById("stock").value
 
-fetch("https://harzo-app.onrender.com/api/products", {
+  fetch("https://harzo-app.onrender.com/api/products/add", {
 
-method:"POST",
+    method: "POST",
 
-headers:{
-"Content-Type":"application/json"
-},
+    headers:{
+      "Content-Type": "application/json"
+    },
 
-body: JSON.stringify({
+    body: JSON.stringify({
+      name:name,
+      variant:variant,
+      price:price,
+      stock:stock,
+      image:""
+    })
 
-name:name,
-variant:variant,
-category:category,
-price:price,
-stock:stock,
-image:""
-
-})
-
-})
-
-.then(res => res.json())
-
-.then(data => {
-
-console.log("Product Added",data)
-
-loadProducts()
-
-})
-
-.catch(err => console.log(err))
-
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log("Product Added", data)
+    loadProducts()
+  })
+  .catch(err => console.log(err))
 }
 
 

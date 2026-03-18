@@ -26,8 +26,8 @@ text-decoration:none;
 }
 
 .main{
-margin-left:260px;
-padding:20px;
+  margin-left:0;
+  padding:20px;
 }
 
 .sidebar a:hover{
@@ -270,3 +270,68 @@ margin-left:70px;
 width:calc(100% - 70px);
 }
 
+.sidebar.collapsed {
+  margin-left: -220px;
+}
+
+.main.collapsed {
+  margin-left: 0;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+
+/* Form Box Design */
+#productForm{
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Input Styling */
+#productForm input,
+#productForm select{
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button Styling */
+#productForm button{
+  width: 100%;
+  padding: 10px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container{
+  display: flex;
+  gap: 20px;
+}
+
+.left{
+  width: 35%;
+}
+
+.right{
+  width: 65%;
+}
