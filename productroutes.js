@@ -4,15 +4,23 @@ const Product = require("../models/product");
 
 // GET all products
 router.get("/", async (req, res) => {
-  const products = await Product.find();
-  res.json(products);
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // ADD product
 router.post("/add", async (req, res) => {
-  const product = new Product(req.body);
-  await product.save();
-  res.json(product);
+  try {
+    const product = new Product(req.body);
+    await product.save();
+    res.json(product);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 module.exports = router;
